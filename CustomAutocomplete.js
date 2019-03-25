@@ -7,28 +7,6 @@ import FormItem from "antd/lib/form/FormItem";
 const dataSource = ["Burns Bay Road", "Downing Street", "Wall Street"];
 
 class CustomAutocomplete extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      ourDataSource: ""
-    };
-  }
-
-  componentDidMount() {
-    this.setState({
-      ourDataSource: this.props.ourDataSource
-    });
-   
-  }
-
-  componentWillReceiveProps(nextProps, nextState) {
-    this.setState({
-      ourDataSource: nextProps["ourDataSource"]
-    });
-  }
-  shouldComponentUpdate(nextProps, nextState) {
-    return true;
-  }
 
   render() {
     const { getFieldDecorator } = this.props.Form.form;
