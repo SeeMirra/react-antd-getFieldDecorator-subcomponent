@@ -3,9 +3,6 @@ import "antd/dist/antd.css";
 import { Icon, Input, AutoComplete } from "antd";
 import FormItem from "antd/lib/form/FormItem";
 
-
-const dataSource = ["Burns Bay Road", "Downing Street", "Wall Street"];
-
 class CustomAutocomplete extends React.Component {
 
   render() {
@@ -21,14 +18,11 @@ class CustomAutocomplete extends React.Component {
       var ourFullDataSource = this.props.ourDataSource;
     }
 
-    var messageVal = this.props.Message;
-    var ourRequired = this.props.Required;
-    var ourID = "autocomplete" + this.props.uid;
     return (
 
         <FormItem>
-      {getFieldDecorator(ourID,{initialValue: "",
-        rules: [{required: ourRequired, message: messageVal}]})(
+      {getFieldDecorator(this.props.uid,{initialValue: "",
+        rules: [{required: this.props.Required, message: this.props.Message}]})(
       <AutoComplete
         className="certain-category-search" 
         dropdownClassName="certain-category-search-dropdown"
