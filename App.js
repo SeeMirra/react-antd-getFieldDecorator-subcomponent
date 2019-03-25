@@ -17,13 +17,12 @@ class App extends Component {
        
         <Form>
                 <CustomAutocomplete
-                  ourDataSource={dataSource2} 
                   Form={this.props}                
                  // onSelect={this.onSelect.bind(this)}
                   handleSearch={this.handleSearch}
                   Required="False"
                   Message="Error Message"
-                  id3="1234"                
+                  uid="1234"                
                 />
 
                 <CustomAutocomplete
@@ -33,7 +32,7 @@ class App extends Component {
                   handleSearch={this.handleSearch}
                   Required="True"
                   Message="Error Message2"                
-                  id3="56782342"
+                  uid="56782342"
                 />
 
                 <CustomAutocomplete
@@ -43,7 +42,7 @@ class App extends Component {
                   handleSearch={this.handleSearch}
                   Required="True"
                   Message="Error Message3"                
-                  id3="5678234234"
+                  uid="5678234234"
                 />
 
                 <CustomAutocomplete
@@ -53,7 +52,7 @@ class App extends Component {
                   handleSearch={this.handleSearch}
                   Required="True"
                   Message="Error Message4"                
-                  id3="5678234"
+                  uid="5678234"
                 />
 
 
