@@ -16,7 +16,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
        
         <Form>
-        <CustomAutocomplete
+                <CustomAutocomplete
                   ourDataSource={dataSource2} 
                   Form={this.props}                
                  // onSelect={this.onSelect.bind(this)}
@@ -26,39 +26,40 @@ class App extends Component {
                   id3="1234"                
                 />
 
-<CustomAutocomplete
+                <CustomAutocomplete
                   ourDataSource={dataSource2} 
                   Form={this.props}                
                  // onSelect={this.onSelect.bind(this)}
                   handleSearch={this.handleSearch}
-                  Required="False"
+                  Required="True"
                   Message="Error Message2"                
-                  id3="5678"
+                  id3="56782342"
                 />
-<FormItem>
-{getFieldDecorator('fieldname3',{initialValue: "",
-        rules: [{required: "False", message: "Whatever2"}]})(
-<CustomAutocomplete
+
+                <CustomAutocomplete
                   ourDataSource={dataSource2} 
                   Form={this.props}                
                  // onSelect={this.onSelect.bind(this)}
                   handleSearch={this.handleSearch}
-                  Required="False"
-                  Message="Error Message3"  
-                  id3="9101" 
-                  />
-                )}</FormItem>
+                  Required="True"
+                  Message="Error Message3"                
+                  id3="5678234234"
+                />
 
-<FormItem>
-                {getFieldDecorator('fieldname2',{initialValue: "",
-        rules: [{required: true, message: "Whatever2"}]})(
-                  <input></input>
-                  )}
-                </FormItem>
+                <CustomAutocomplete
+                  ourDataSource={dataSource2} 
+                  Form={this.props}                
+                 // onSelect={this.onSelect.bind(this)}
+                  handleSearch={this.handleSearch}
+                  Required="True"
+                  Message="Error Message4"                
+                  id3="5678234"
+                />
+
 
                 <FormItem>
                 {getFieldDecorator('fieldname3',{initialValue: "",
-        rules: [{required: true, message: "Whatever2"}]})(
+                rules: [{required: true, message: "Whatever2"}]})(
                   <input></input>
                   )}
                 </FormItem>
