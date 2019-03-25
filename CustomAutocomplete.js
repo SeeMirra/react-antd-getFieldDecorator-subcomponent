@@ -6,7 +6,7 @@ import FormItem from "antd/lib/form/FormItem";
 class CustomAutocomplete extends React.Component {
 
   render() {
-    const { getFieldDecorator } = this.props.Form.form;
+    var { getFieldDecorator } = this.props.Form.form;
 
     if (!this.props.ourDataSource) {
       var ourFullDataSource = [
