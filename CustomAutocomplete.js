@@ -81,7 +81,7 @@ console.log(this.props.id3);
     return (
         <FormItem>
       {getFieldDecorator(ourID,{initialValue: "",
-        rules: [{required: {requiredVal}, message: "messageVal"}]})(
+        rules: [{required: {requiredVal}, message: messageVal}]})(
       <AutoComplete
         className="certain-category-search" 
         dropdownClassName="certain-category-search-dropdown"
