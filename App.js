@@ -9,7 +9,6 @@ const dataSource2 = ["asdf", "qwer", "zxcv"];
 class App extends Component {
   render() {
     const { getFieldDecorator } = this.props.form;
-    console.log('111: ', getFieldDecorator);
     return (
       <div className="App">
         <header className="App-header">
@@ -18,8 +17,6 @@ class App extends Component {
         <Form>
                 <CustomAutocomplete
                   Form={this.props}                
-                 // onSelect={this.onSelect.bind(this)}
-                  handleSearch={this.handleSearch}
                   Required="False"
                   Message="Error Message"
                   uid="1234"                
@@ -28,8 +25,6 @@ class App extends Component {
                 <CustomAutocomplete
                   ourDataSource={dataSource2} 
                   Form={this.props}                
-                 // onSelect={this.onSelect.bind(this)}
-                  handleSearch={this.handleSearch}
                   Required="True"
                   Message="Error Message2"                
                   uid="56782342"
@@ -38,8 +33,6 @@ class App extends Component {
                 <CustomAutocomplete
                   ourDataSource={dataSource2} 
                   Form={this.props}                
-                 // onSelect={this.onSelect.bind(this)}
-                  handleSearch={this.handleSearch}
                   Required="True"
                   Message="Error Message3"                
                   uid="5678234234"
@@ -48,8 +41,6 @@ class App extends Component {
                 <CustomAutocomplete
                   ourDataSource={dataSource2} 
                   Form={this.props}                
-                 // onSelect={this.onSelect.bind(this)}
-                  handleSearch={this.handleSearch}
                   Required="True"
                   Message="Error Message4"                
                   uid="5678234"
