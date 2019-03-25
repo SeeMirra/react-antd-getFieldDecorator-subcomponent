@@ -3,26 +3,8 @@ import "antd/dist/antd.css";
 import { Icon, Input, AutoComplete } from "antd";
 import FormItem from "antd/lib/form/FormItem";
 
-const Option = AutoComplete.Option;
-const OptGroup = AutoComplete.OptGroup;
 
 const dataSource = ["Burns Bay Road", "Downing Street", "Wall Street"];
-
-function renderTitle(title) {
-  return (
-    <span>
-      {title}
-      <a
-        style={{ float: "right" }}
-        href="https://www.google.com/search?q=antd"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        ??
-      </a>
-    </span>
-  );
-}
 
 class CustomAutocomplete extends React.Component {
   constructor(props) {
@@ -61,18 +43,11 @@ class CustomAutocomplete extends React.Component {
       var ourFullDataSource = this.props.ourDataSource;
     }
 
-    if (this.props.Message) {
-      var messageVal = this.props.Message;
-    } else {
-      var messageVal = "noval";
-    }
+
     var ourRequired = this.props.Required;
     var ourID = "autocomplete" + this.props.id3;
-    console.log(ourID);
-console.log(this.props.id3);
-    console.log(this.props.Required);
-    console.log(this.props.Message);
     return (
+
         <FormItem>
       {getFieldDecorator(ourID,{initialValue: "",
         rules: [{required: ourRequired, message: messageVal}]})(
@@ -97,8 +72,9 @@ console.log(this.props.id3);
       </AutoComplete>      
       )}
       </FormItem>
+
       );
   }
 }
 
-export { dataSource, OptGroup, Option, CustomAutocomplete };
+export { CustomAutocomplete };
