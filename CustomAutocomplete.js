@@ -14,7 +14,7 @@ function renderTitle(title) {
       {title}
       <a
         style={{ float: "right" }}
-        href="https://www.google.com/search?q=something"
+        href="https://www.google.com/search?q=antd"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -61,18 +61,12 @@ class CustomAutocomplete extends React.Component {
       var ourFullDataSource = this.props.ourDataSource;
     }
 
-    if (this.props.Required) {
-      var requiredVal = true;
-    } else {
-      var requiredVal = false;
-    }
-
     if (this.props.Message) {
       var messageVal = this.props.Message;
     } else {
       var messageVal = "noval";
     }
- 
+    var ourRequired = this.props.Required;
     var ourID = "autocomplete" + this.props.id3;
     console.log(ourID);
 console.log(this.props.id3);
@@ -81,7 +75,7 @@ console.log(this.props.id3);
     return (
         <FormItem>
       {getFieldDecorator(ourID,{initialValue: "",
-        rules: [{required: {requiredVal}, message: messageVal}]})(
+        rules: [{required: ourRequired, message: messageVal}]})(
       <AutoComplete
         className="certain-category-search" 
         dropdownClassName="certain-category-search-dropdown"
