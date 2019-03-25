@@ -43,9 +43,9 @@ class CustomAutocomplete extends React.Component {
       var ourFullDataSource = this.props.ourDataSource;
     }
 
-
+    var messageVal = this.props.Message;
     var ourRequired = this.props.Required;
-    var ourID = "autocomplete" + this.props.id3;
+    var ourID = "autocomplete" + this.props.uid;
     return (
 
         <FormItem>
